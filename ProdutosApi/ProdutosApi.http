@@ -1,0 +1,44 @@
+@ProdutosApi_HostAddress = http://localhost:5255
+
+### Listar todos os produtos
+GET {{ProdutosApi_HostAddress}}/api/v1/produtos
+Accept: application/json
+
+###
+
+### Buscar produto por Id
+GET {{ProdutosApi_HostAddress}}/api/v1/produtos/1
+Accept: application/json
+
+###
+
+### Criar novo produto
+POST {{ProdutosApi_HostAddress}}/api/v1/produtos
+Content-Type: application/json
+
+{
+  "nome": "Headset Gamer",
+  "preco": 249.90,
+  "categoria": "Áudio",
+  "estoque": 15
+}
+
+###
+
+### Atualizar produto existente
+PUT {{ProdutosApi_HostAddress}}/api/v1/produtos/1
+Content-Type: application/json
+
+{
+  "nome": "Teclado Mecânico RGB",
+  "preco": 399.90,
+  "categoria": "Periféricos",
+  "estoque": 30
+}
+
+###
+
+### Remover produto
+DELETE {{ProdutosApi_HostAddress}}/api/v1/produtos/1
+
+###
